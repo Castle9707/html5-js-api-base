@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .rect {
+      position: absolute;
+      width: 200px;
+      height: 200px;
+      border: 1px solid black;
+      background-color: #84e6f7;
+    }
+
+    .ball {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      border: 1px solid black;
+      background-color: red;
+      color: white;
+      font-weight: 900;
+      text-align: center;
+      line-height: 60px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="rect">
+    <div class="ball" draggable="true">1</div>
+  </div>
+
+  <script>
+    const b = document.querySelector(".ball");
+    const handler = (e) => {
+      console.log(e.type);
+    };
+
+    b.addEventListener("dragstart", handler);
+    b.addEventListener("dragend", handler);
+    // b.addEventListener("drag", handler);
+  </script>
+</body>
+
+</html>
