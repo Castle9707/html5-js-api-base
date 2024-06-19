@@ -44,7 +44,7 @@ mkdir public
 import express from "express";
 import serveIndex from "serve-index";
 
-const web_port = 3031;
+const web_port = 3021;
 const app = express();
 
 app.use(express.static("public"));
